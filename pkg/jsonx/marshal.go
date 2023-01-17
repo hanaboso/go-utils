@@ -2,7 +2,7 @@ package jsonx
 
 import "encoding/json"
 
-func unmarshalBytes[T any](data []byte) (*T, error) {
+func UnmarshalBytes[T any](data []byte) (*T, error) {
 	out := new(T)
 	if err := json.Unmarshal(data, out); err != nil {
 		return nil, err
@@ -10,7 +10,7 @@ func unmarshalBytes[T any](data []byte) (*T, error) {
 	return out, nil
 }
 
-func unmarshalString[T any](data string) (*T, error) {
+func UnmarshalString[T any](data string) (*T, error) {
 	out := new(T)
 	if err := json.Unmarshal([]byte(data), out); err != nil {
 		return nil, err
