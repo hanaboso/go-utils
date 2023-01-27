@@ -25,3 +25,12 @@ func FromArrayDefault(haystack []string, index int, defaultValue string) string 
 
 	return defaultValue
 }
+
+func NthItems(haystack []string, step int) []string {
+	result := []string{}
+	for i := step - 1; i < len(haystack); i += step {
+		result = append(result, haystack[i])
+	}
+
+	return result
+}
