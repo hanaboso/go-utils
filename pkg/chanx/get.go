@@ -1,8 +1,11 @@
 package chanx
 
-func TryAwait[T interface{}](channel chan T) {
+func TryGet[T interface{}](channel chan T) (T, bool) {
 	select {
-	case <-channel:
+	case value := <-channel:
+		return value, true
 	default:
+		var empty T
+		return empty, false
 	}
 }
