@@ -1,7 +1,6 @@
 package stringx
 
 import (
-	"github.com/hanaboso/go-utils/pkg/intx"
 	"strings"
 )
 
@@ -16,7 +15,7 @@ func ToChar(string, char string) string {
 
 func Truncate(str string, max int) string {
 	runes := []rune(str)
-	maxLen := intx.Min(len(str), max)
+	maxLen := mathx.Min(len(str), max)
 
 	return string(runes[:maxLen])
 }

@@ -1,17 +1,14 @@
 package intx
 
-func Max(a, b int) int {
-	if a >= b {
-		return a
-	}
+import (
+	"github.com/hanaboso/go-utils/pkg/mathx"
+	"golang.org/x/exp/constraints"
+)
 
-	return b
+func Max[T constraints.Ordered](a T, b ...T) T {
+	mathx.Max(a, b)
 }
 
-func Min(a, b int) int {
-	if a <= b {
-		return a
-	}
-
-	return b
+func Min[T constraints.Ordered](a T, b ...T) T {
+	mathx.Min(a, b)
 }
