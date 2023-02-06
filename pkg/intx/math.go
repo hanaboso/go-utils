@@ -6,9 +6,9 @@ import (
 )
 
 func Max[T constraints.Ordered](a T, b ...T) T {
-	mathx.Max(a, b)
+	return mathx.Max(a, b...)
 }
 
 func Min[T constraints.Ordered](a T, b ...T) T {
-	mathx.Min(a, b)
+	return mathx.Min(a, b...)
 }

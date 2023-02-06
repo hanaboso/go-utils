@@ -1,6 +1,7 @@
 package stringx
 
 import (
+	"github.com/hanaboso/go-utils/pkg/mathx"
 	"strings"
 )
 
