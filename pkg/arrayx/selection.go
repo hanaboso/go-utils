@@ -12,3 +12,11 @@ func NthItemsFrom[T any](haystack []T, step, firstIndex int) []T {
 
 	return result
 }
+
+func Get[T any](haystack []T, index int, defaultValue T) T {
+	if haystack == nil || len(haystack) <= index {
+		return defaultValue
+	}
+
+	return haystack[index]
+}
