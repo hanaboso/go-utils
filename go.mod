@@ -1,10 +1,10 @@
 module github.com/hanaboso/go-utils
 
-go 1.19
+go 1.24.0
 
 require (
-	github.com/stretchr/testify v1.8.1
-	golang.org/x/exp v0.0.0-20230203172020-98cc5a0785f9
+	github.com/stretchr/testify v1.10.0
+	golang.org/x/exp v0.0.0-20250408133849-7e4ce0ab07d0
 )
 
 require (

@@ -5,7 +5,7 @@ func NthItems[T any](haystack []T, step int) []T {
 }
 
 func NthItemsFrom[T any](haystack []T, step, firstIndex int) []T {
-	result := []T{}
+	var result []T
 	for i := firstIndex; i < len(haystack); i += step {
 		result = append(result, haystack[i])
 	}

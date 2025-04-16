@@ -5,23 +5,23 @@ import (
 )
 
 func Max[T constraints.Ordered](a T, b ...T) T {
-	max := a
+	maxVar := a
 	for _, i := range b {
-		if i > max {
-			max = i
+		if i > maxVar {
+			maxVar = i
 		}
 	}
 
-	return max
+	return maxVar
 }
 
 func Min[T constraints.Ordered](a T, b ...T) T {
-	min := a
+	minVar := a
 	for _, i := range b {
-		if i < min {
-			min = i
+		if i < minVar {
+			minVar = i
 		}
 	}
 
-	return min
+	return minVar
 }
